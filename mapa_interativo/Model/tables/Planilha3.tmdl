@@ -1,0 +1,65 @@
+﻿table Planilha3
+
+	column Unidade
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Unidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Endereço
+		dataType: string
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: Endereço
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Endereço Completo'
+		dataType: string
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: Endereço Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column Grupo
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Grupo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Planilha3 = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\uliss\OneDrive\Área de Trabalho\Selafort\mapeamento\mapeamento interativo PBI\mapeamento grafico2\mapeamento grafico\varejotintas_mg.xlsx"), null, true),
+				    #"Varejo Tintas MG_Sheet" = Fonte{[Item="Varejo Tintas MG",Kind="Sheet"]}[Data],
+				    #"Tipo Alterado2" = Table.TransformColumnTypes(#"Varejo Tintas MG_Sheet",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}, {"Column5", type text}, {"Column6", type text}}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Tipo Alterado2",{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}, {"Column4", type text}}),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(#"Tipo Alterado", [PromoteAllScalars=true]),
+				    #"Tipo Alterado1" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Unidade", type text}, {"Endereço", type text}, {"Cidade", type text}, {"UF", type text}})
+				in
+				    #"Tipo Alterado1"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,44 @@
+﻿model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Erros nas consultas que foram carregadas em 27/03/2025 10:52:57.
+queryGroup 'Erros na Consulta - 27/03/2025 10:52:57'
+
+	annotation PBI_QueryGroupOrder = 0
+
+/// Erros nas consultas que foram carregadas em 27/03/2025 11:00:01.
+queryGroup 'Erros na Consulta - 27/03/2025 11:00:01'
+
+	annotation PBI_QueryGroupOrder = 1
+
+/// Erros nas consultas que foram carregadas em 31/03/2025 20:14:51.
+queryGroup 'Erros na Consulta - 31/03/2025 20:14:51'
+
+	annotation PBI_QueryGroupOrder = 2
+
+/// Erros nas consultas que foram carregadas em 01/04/2025 12:28:21.
+queryGroup 'Erros na Consulta - 01/04/2025 12:28:21'
+
+	annotation PBI_QueryGroupOrder = 3
+
+/// Erros nas consultas que foram carregadas em 01/04/2025 20:30:30.
+queryGroup 'Erros na Consulta - 01/04/2025 20:30:30'
+
+	annotation PBI_QueryGroupOrder = 4
+
+annotation PBI_QueryOrder = ["lojas_varejo","Erros em lojas_varejo","Erros em lojas_varejo (2)","Erros em lojas_varejo (3)","Planilha3","Erros em lojas_varejo (4)","Erros em lojas_varejo (5)"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63fe6d07e0e1b
+
+ref table lojas_varejo
+ref table Planilha3
+
+ref cultureInfo pt-BR
+

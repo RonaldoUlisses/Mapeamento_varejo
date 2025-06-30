@@ -1,0 +1,222 @@
+{
+  "name": "5036c5642c0c7c129d1b",
+  "layouts": [
+    {
+      "id": 0,
+      "position": {
+        "x": 15.415617128463476,
+        "y": 16.322418136020151,
+        "z": 0,
+        "width": 1074.5591939546598,
+        "height": 690.98236775818634,
+        "tabOrder": 0
+      }
+    }
+  ],
+  "singleVisual": {
+    "visualType": "esriVisual",
+    "projections": {
+      "Location": [
+        {
+          "queryRef": "Planilha3.Endereço Completo"
+        }
+      ],
+      "Color": [
+        {
+          "queryRef": "Planilha3.Grupo"
+        }
+      ]
+    },
+    "prototypeQuery": {
+      "Version": 2,
+      "From": [
+        {
+          "Name": "p",
+          "Entity": "Planilha3",
+          "Type": 0
+        }
+      ],
+      "Select": [
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Endereço Completo"
+          },
+          "Name": "Planilha3.Endereço Completo",
+          "NativeReferenceName": "Endereço Completo"
+        },
+        {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Source": "p"
+              }
+            },
+            "Property": "Grupo"
+          },
+          "Name": "Planilha3.Grupo",
+          "NativeReferenceName": "Grupo"
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "mapTools": [
+        {
+          "properties": {
+            "basemaps": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapObject": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"portalUrl\":\"https://www.arcgis.com\",\"version\":\"2.4\",\"isAuthorNamedUser\":false,\"map\":{\"webmap\":{\"is3d\":false,\"itemData\":{\"operationalLayers\":[{\"id\":\"MyLayer\",\"visibility\":true,\"opacity\":1,\"minScale\":0,\"maxScale\":0,\"refreshInterval\":0,\"title\":\"Endereço Completo\",\"objectIdField\":\"objectId\",\"type\":\"DataLayer\",\"layerType\":\"ArcGISFeatureLayer\",\"popupEnabled\":true,\"disablePopup\":false,\"visible\":true,\"geometryType\":\"point\",\"source\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}],\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"esriMaps\":{\"customProps\":null,\"isTimeEnabled\":\"false\",\"clusterInfo\":null,\"filteredRenderer\":null,\"lastShareInfo\":null},\"timeInfo\":null,\"showLabels\":true,\"featureCollection\":{\"layers\":[{\"popupInfo\":{\"popupElements\":[{\"type\":\"fields\",\"fieldInfos\":[{\"fieldName\":\"Planilha3_Endere_C3_A7o_20Completo\",\"isEditable\":false,\"label\":\"Endereço Completo\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Planilha3_Grupo\",\"isEditable\":false,\"label\":\"Grupo\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":false,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}]}],\"expressionInfos\":[],\"fieldInfos\":[{\"fieldName\":\"Planilha3_Endere_C3_A7o_20Completo\",\"isEditable\":false,\"label\":\"Endereço Completo\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"Planilha3_Grupo\",\"isEditable\":false,\"label\":\"Grupo\",\"tooltip\":\"\",\"visible\":true},{\"fieldName\":\"ROW_ID\",\"format\":{\"digitSeparator\":true,\"places\":0},\"isEditable\":false,\"label\":\"ROW_ID\",\"tooltip\":\"\",\"visible\":true}],\"title\":\"\",\"actions\":[]},\"layerDefinition\":{\"objectIdField\":\"objectId\",\"fields\":[{\"alias\":\"objectId\",\"editable\":false,\"name\":\"objectId\",\"nullable\":false,\"type\":\"esriFieldTypeOID\"},{\"alias\":\"Endereço Completo\",\"editable\":true,\"length\":-1,\"name\":\"Planilha3_Endere_C3_A7o_20Completo\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"Grupo\",\"editable\":true,\"length\":-1,\"name\":\"Planilha3_Grupo\",\"nullable\":true,\"type\":\"esriFieldTypeString\"},{\"alias\":\"ROW_ID\",\"editable\":true,\"name\":\"ROW_ID\",\"nullable\":true,\"type\":\"esriFieldTypeInteger\"}],\"geometryType\":\"point\",\"drawingInfo\":{\"renderer\":{\"type\":\"uniqueValue\",\"visualVariables\":[],\"field1\":\"Planilha3_Grupo\",\"legendOptions\":{\"title\":\"Grupo\"},\"defaultLabel\":\"Outro\",\"defaultSymbol\":{\"type\":\"esriSMS\",\"color\":[170,170,170,255],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":6,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[153,153,153,64],\"width\":0.75,\"style\":\"esriSLSSolid\"}},\"uniqueValueGroups\":[{\"classes\":[{\"description\":\"\",\"label\":\"Planalto Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[237,81,81,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Planalto Tintas\"]]},{\"description\":\"\",\"label\":\"Varejão das Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,158,206,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Varejão das Tintas\"]]},{\"description\":\"\",\"label\":\"Clube das Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[167,198,54,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Clube das Tintas\"]]},{\"description\":\"\",\"label\":\"Casa e Tinta\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[158,85,156,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Casa e Tinta\"]]},{\"description\":\"\",\"label\":\"RN Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[252,146,31,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"RN Tintas\"]]},{\"description\":\"\",\"label\":\"Nossa Loja\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[255,222,62,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Nossa Loja\"]]},{\"description\":\"\",\"label\":\"Nacional Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[247,137,216,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Nacional Tintas\"]]},{\"description\":\"\",\"label\":\"Luidar\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[183,129,74,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Luidar\"]]},{\"description\":\"\",\"label\":\"RE Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[60,175,153,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"RE Tintas\"]]},{\"description\":\"\",\"label\":\"Tintas Valle\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[107,107,214,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"values\":[[\"Tintas Valle\"]]}]}],\"uniqueValueInfos\":[{\"description\":\"\",\"label\":\"Planalto Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[237,81,81,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Planalto Tintas\"},{\"description\":\"\",\"label\":\"Varejão das Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[20,158,206,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Varejão das Tintas\"},{\"description\":\"\",\"label\":\"Clube das Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[167,198,54,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Clube das Tintas\"},{\"description\":\"\",\"label\":\"Casa e Tinta\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[158,85,156,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Casa e Tinta\"},{\"description\":\"\",\"label\":\"RN Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[252,146,31,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"RN Tintas\"},{\"description\":\"\",\"label\":\"Nossa Loja\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[255,222,62,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Nossa Loja\"},{\"description\":\"\",\"label\":\"Nacional Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[247,137,216,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Nacional Tintas\"},{\"description\":\"\",\"label\":\"Luidar\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[183,129,74,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Luidar\"},{\"description\":\"\",\"label\":\"RE Tintas\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[60,175,153,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"RE Tintas\"},{\"description\":\"\",\"label\":\"Tintas Valle\",\"symbol\":{\"type\":\"esriSMS\",\"color\":[107,107,214,178],\"angle\":0,\"xoffset\":0,\"yoffset\":0,\"size\":10,\"style\":\"esriSMSCircle\",\"outline\":{\"type\":\"esriSLS\",\"color\":[255,255,255,204],\"width\":1,\"style\":\"esriSLSSolid\"}},\"value\":\"Tintas Valle\"}]},\"labelingInfo\":[{\"labelExpression\":\"[Planilha3_Grupo]\",\"labelExpressionInfo\":{\"expression\":\"$feature[\\\"Planilha3_Grupo\\\"]\"},\"labelPlacement\":\"esriServerPointLabelPlacementAboveRight\",\"labelPosition\":\"curved\",\"repeatLabel\":true,\"symbol\":{\"type\":\"esriTS\",\"color\":[0,0,0,255],\"font\":{\"family\":\"Arial Unicode MS\",\"size\":12},\"horizontalAlignment\":\"center\",\"kerning\":true,\"rotated\":false,\"text\":\"\",\"verticalAlignment\":\"baseline\",\"xoffset\":0,\"yoffset\":0,\"angle\":0,\"lineWidth\":192,\"lineHeight\":1}}],\"transparency\":0},\"featureReduction\":null,\"minScale\":0,\"maxScale\":0,\"definitionExpression\":null,\"elevationInfo\":null,\"name\":\"Endereço Completo\",\"type\":\"DataLayer\",\"locationProvider\":{\"type\":\"cachedgeocode\",\"sourceCountry\":\"BR\",\"targetSR\":102100,\"lookupFields\":[{\"lookupField\":\"SingleLine\",\"outField\":\"Planilha3_Endere_C3_A7o_20Completo\"}],\"geocodeServiceUrl\":\"https://utility.arcgis.com/usrsvcs/appservices/L7zl5sI0W1hBHWRI/rest/services/World/GeocodeServer\"},\"queryParameters\":{\"tableId\":\"\"}},\"featureSet\":{\"features\":[{\"attributes\":{},\"geometry\":{\"x\":0,\"y\":0,\"type\":\"point\",\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100}}}]}}]}}],\"tables\":[],\"baseMap\":{\"baseMapLayers\":[{\"id\":\"VectorTile_3287\",\"opacity\":1,\"title\":\"OpenStreetMap\",\"visibility\":true,\"layerType\":\"VectorTileLayer\",\"styleUrl\":\"https://cdn.arcgis.com/sharing/rest/content/items/0df19d2d940b47658857cc2fc9623840/resources/styles/root.json\"}],\"title\":\"OpenStreetMap\",\"origItemId\":\"c29cfb7875fc4b97b58ba6987c460862\"},\"version\":\"2.26\",\"authoringApp\":\"ArcGIS for Power BI\",\"bookmarks\":[],\"initialState\":{\"viewpoint\":{\"targetGeometry\":{\"spatialReference\":{\"latestWkid\":3857,\"wkid\":102100},\"xmin\":-6427572.93562137,\"ymin\":-2987029.167491247,\"xmax\":-3829936.966378631,\"ymax\":-1372679.130108754}}}}},\"webmapExtensions\":{\"format\":2}},\"embedCheckPassed\":false}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "geometryCache": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "'{\"key\":\"cachedgeocode@@br\",\"compressionMethod\":\"pako\",\"data\":\"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\"}'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "mapControls": [
+        {
+          "properties": {
+            "zoomTools": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "featureInfo": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "vcObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Varejo de Tintas MG'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

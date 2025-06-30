@@ -1,0 +1,110 @@
+﻿expression 'Erros em lojas_varejo' =
+		let
+		Fonte = lojas_varejo,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"})
+		in
+		  #"Colunas Reordenadas"
+	queryGroup: 'Erros na Consulta - 27/03/2025 10:52:57'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em lojas_varejo (2)' =
+		let
+		Fonte = lojas_varejo,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"})
+		in
+		  #"Colunas Reordenadas"
+	queryGroup: 'Erros na Consulta - 27/03/2025 11:00:01'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em lojas_varejo (3)' =
+		let
+		Fonte = lojas_varejo,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"})
+		in
+		  #"Colunas Reordenadas"
+	queryGroup: 'Erros na Consulta - 31/03/2025 20:14:51'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em lojas_varejo (4)' =
+		let
+		Fonte = lojas_varejo,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"})
+		in
+		  #"Colunas Reordenadas"
+	queryGroup: 'Erros na Consulta - 01/04/2025 12:28:21'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
+expression 'Erros em lojas_varejo (5)' =
+		let
+		Fonte = lojas_varejo,
+		  #"Incompatibilidades de Tipo Detectadas" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Fonte, Table.ColumnsOfType(Fonte, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "O tipo do valor não corresponde ao tipo da coluna.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Fonte, pairs),
+		  #"Índice Adicionado" = Table.AddIndexColumn(#"Incompatibilidades de Tipo Detectadas", "Número da Linha" ,1),
+		  #"Erros Mantidos" = Table.SelectRowsWithErrors(#"Índice Adicionado", {"CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"}),
+		  #"Colunas Reordenadas" = Table.ReorderColumns(#"Erros Mantidos", {"Número da Linha", "CNPJ", "Razao Social", "Nome Fantasia", "Ramo de Atividade", "Tipo Logradouro", "Logradouro", "Numero", "Bairro", "CEP", "UF", "Municipio", "Pais", "Endereco"})
+		in
+		  #"Colunas Reordenadas"
+	queryGroup: 'Erros na Consulta - 01/04/2025 20:30:30'
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

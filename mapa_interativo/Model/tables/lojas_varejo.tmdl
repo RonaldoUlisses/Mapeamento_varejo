@@ -1,0 +1,117 @@
+﻿table lojas_varejo
+
+	column CNPJ
+		dataType: string
+		summarizeBy: none
+		sourceColumn: CNPJ
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Razao Social'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Razao Social
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nome Fantasia'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Nome Fantasia
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Ramo de Atividade'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Ramo de Atividade
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Tipo Logradouro'
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Tipo Logradouro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Logradouro
+		dataType: string
+		summarizeBy: none
+		sourceColumn: Logradouro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Numero
+		dataType: int64
+		formatString: 0
+		summarizeBy: none
+		sourceColumn: Numero
+
+		annotation SummarizationSetBy = User
+
+	column Bairro
+		dataType: string
+		dataCategory: Place
+		summarizeBy: none
+		sourceColumn: Bairro
+
+		annotation SummarizationSetBy = Automatic
+
+	column CEP
+		dataType: int64
+		formatString: 0
+		dataCategory: PostalCode
+		summarizeBy: none
+		sourceColumn: CEP
+
+		annotation SummarizationSetBy = User
+
+	column UF
+		dataType: string
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column Municipio
+		dataType: string
+		dataCategory: County
+		summarizeBy: none
+		sourceColumn: Municipio
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pais
+		dataType: string
+		dataCategory: Country
+		summarizeBy: none
+		sourceColumn: Pais
+
+		annotation SummarizationSetBy = Automatic
+
+	column Endereco
+		dataType: string
+		dataCategory: Address
+		summarizeBy: none
+		sourceColumn: Endereco
+
+		annotation SummarizationSetBy = Automatic
+
+	partition lojas_varejo = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\uliss\OneDrive\Área de Trabalho\Selafort\mapeamento\mapeamento interativo PBI\mapeamento grafico2\mapeamento grafico\varejo_cidadesProspeccao.xlsx"), null, true),
+				    lojas_varejo_Sheet = Fonte{[Item="lojas_varejo",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(lojas_varejo_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"CNPJ", type text}, {"Razao Social", type text}, {"Nome Fantasia", type text}, {"Ramo de Atividade", type text}, {"Tipo Logradouro", type text}, {"Logradouro", type text}, {"Numero", Int64.Type}, {"Bairro", type text}, {"CEP", Int64.Type}, {"UF", type text}, {"Municipio", type text}, {"Pais", type text}, {"Endereco", type text}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each ([Municipio] = "ALEM PARAIBA" or [Municipio] = "CARATINGA" or [Municipio] = "CATAGUASES" or [Municipio] = "ESMERALDAS" or [Municipio] = "ITABIRA" or [Municipio] = "JOAO MONLEVADE" or [Municipio] = "MANHUACU" or [Municipio] = "SABARA" or [Municipio] = "VISCONDE DO RIO BRANCO"))
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

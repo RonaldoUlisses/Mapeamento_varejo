@@ -1,0 +1,79 @@
+{
+  "objects": {
+    "data": [
+      {
+        "properties": {
+          "mode": {
+            "expr": {
+              "Literal": {
+                "Value": "'Basic'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "general": [
+      {
+        "properties": {}
+      }
+    ]
+  },
+  "projectionOrdering": {
+    "Values": [
+      0
+    ]
+  },
+  "projectionActiveItems": {
+    "Values": [
+      {
+        "queryRef": "lojas_varejo.Municipio",
+        "suppressConcat": false
+      }
+    ]
+  },
+  "queryMetadata": {
+    "Select": [
+      {
+        "Restatement": "Municipio",
+        "Name": "lojas_varejo.Municipio",
+        "Type": 2048,
+        "DataCategory": 6
+      }
+    ]
+  },
+  "visualElements": [
+    {
+      "DataRoles": [
+        {
+          "Name": "Values",
+          "Projection": 0,
+          "isActive": true
+        }
+      ]
+    }
+  ],
+  "selects": [
+    {
+      "displayName": "Municipio",
+      "queryName": "lojas_varejo.Municipio",
+      "roles": {
+        "Values": true
+      },
+      "type": {
+        "category": "County",
+        "underlyingType": 6816769
+      },
+      "expr": {
+        "Column": {
+          "Expression": {
+            "SourceRef": {
+              "Entity": "lojas_varejo"
+            }
+          },
+          "Property": "Municipio"
+        }
+      }
+    }
+  ]
+}
